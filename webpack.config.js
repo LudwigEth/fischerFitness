@@ -7,6 +7,7 @@ module.exports = {
     filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/images/[hash][ext][query]",
+    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -24,5 +25,12 @@ module.exports = {
         type: "asset/resource",
       },
     ],
+  },
+  devServer: {
+    static: {
+      directory: path.jpin(__dirname, "dist"),
+    },
+    compress: true,
+    port: 9000,
   },
 };
