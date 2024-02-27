@@ -1,0 +1,29 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+*.log
+
+# Environment files
+.env
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional: Ignore the npm-debug.log file
+npm-debug.log*
+
+# Optional: Ignore the package-lock.json to ensure consistency across installations
+# package-lock.json
+
+# Optional: Ignore Yarn error logs
+yarn-error.log
