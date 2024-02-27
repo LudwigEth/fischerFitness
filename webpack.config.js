@@ -6,6 +6,7 @@ module.exports = {
   output: {
     filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "assets/images/[hash][ext][query]",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -17,6 +18,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
